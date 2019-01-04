@@ -47,6 +47,11 @@ def get_average_age_for_season(data, season)
     info.collect do |k, v|
       if k == "age"
         counter += 1 
-        age += v.to_
+        age += v.to_f 
+      end
+    end
+  end
+  answer = (age / counter).round 
+  return answer
       
 end
